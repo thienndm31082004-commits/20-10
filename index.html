@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuc Mung 20/10</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Be+Vietnam+Pro:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="petalCanvas"></canvas>
+  <div class="bg-overlay"></div>
+
+  <div class="flowers-top">
+    <div class="f f1"></div>
+    <div class="f f2"></div>
+    <div class="f f3"></div>
+    <div class="f f4"></div>
+    <div class="f f5"></div>
+    <div class="f f6"></div>
+  </div>
+  <div class="flowers-bottom">
+    <div class="f fb1"></div>
+    <div class="f fb2"></div>
+    <div class="f fb3"></div>
+    <div class="f fb4"></div>
+    <div class="f fb5"></div>
+  </div>
+
+  <div class="main-content">
+    <div class="date-header">
+      <div class="star-line"><span></span><span class="dot"></span><span></span></div>
+      <h1 class="date-text">20 · 10</h1>
+      <div class="star-line"><span></span><span class="dot"></span><span></span></div>
+    </div>
+
+    <p class="subtitle">✿ Ngày Phụ Nữ Việt Nam ✿</p>
+
+    <div class="photo-section">
+      <div class="orbit-ring" id="orbitRing"></div>
+      <div class="frame-glow"></div>
+      <div class="photo-frame">
+        <div id="slideshow" class="slideshow">
+          <div class="slide-placeholder">
+            <div class="placeholder-icon">🌸</div>
+            <p>Thêm ảnh của bạn</p>
+          </div>
+        </div>
+        <div class="frame-border"></div>
+      </div>
+    </div>
+
+    <div class="message-wrap">
+      <p class="message-text" id="msgLine1">Hôm nay, dành tặng em cả một vườn dịu dàng</p>
+      <p class="message-text delay1" id="msgLine2">Cảm ơn em đã là một phần tuyệt vời của cuộc đời anh 💖</p>
+    </div>
+
+    <div class="letter-card">
+      <div class="letter-header">💌 Gửi đến người đặc biệt</div>
+      <div class="letter-body" id="letterBody">
+        Chúc em yêu ngày 20/10 thật vui vẻ, luôn xinh đẹp và rạng rỡ như ánh nắng ban mai. Cảm ơn em đã xuất hiện và
+        khiến cuộc sống của anh trở nên đẹp hơn mỗi ngày. Chúc em một ngày ngập tràn hoa, quà và những bất ngờ ngọt
+        ngào.
+      </div>
+    </div>
+
+    <div class="music-player" id="musicPlayer">
+      <div class="music-vinyl" id="musicVinyl">🎵</div>
+      <div class="music-details">
+        <div class="music-title" id="musicTitle">Nhạc Nền Lãng Mạn</div>
+        <div class="music-sub">Nhấn phát để bắt đầu</div>
+      </div>
+      <button class="play-btn" id="playBtn" onclick="toggleMusic()">▶</button>
+      <label class="upload-btn" title="Tải nhạc lên">
+        📁
+        <input type="file" id="musicUpload" accept="audio/*" onchange="loadMusic(event)" />
+      </label>
+    </div>
+    <audio id="bgMusic" loop></audio>
+  </div>
+
+  <div class="upload-panel">
+    <button class="panel-btn" onclick="togglePanel()">🖼️</button>
+    <div class="panel-box" id="panelBox">
+      <div class="panel-title">Thêm Ảnh Slideshow</div>
+      <label class="photo-label">
+        📷 Chọn nhiều ảnh
+        <input type="file" id="photoUpload" accept="image/*" multiple onchange="loadPhotos(event)" />
+      </label>
+      <div class="photo-count" id="photoCount">0 ảnh đã chọn</div>
+    </div>
+  </div>
+
+  <div id="heartBurst"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
